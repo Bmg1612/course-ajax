@@ -15,7 +15,7 @@
             requestError(err, 'image');
         };
         imgRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`);
-        imgRequest.setRequestHeader('Authorization', 'Client-ID v5FFgYLlEp9xyUOiZVrjtJGfwov_MXDs3WcWqCV52Fo');
+        imgRequest.setRequestHeader('Authorization', 'Client-ID XXXXXXXXXXXXXXX');
         imgRequest.send();
 
         const articleRequest = new XMLHttpRequest();
@@ -23,7 +23,7 @@
         articleRequest.onerror = function (err) {
             requestError(err, 'articles');
         };
-        articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=TPLAvw7mn3TFohV8AgfAj4SoxWhuPkQz`);
+        articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=XXXXXXXXXXX`);
         articleRequest.send();
     
     });
